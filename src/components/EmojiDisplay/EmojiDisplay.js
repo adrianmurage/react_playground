@@ -1,5 +1,5 @@
 import React from "react";
-import './EmojiDisplay.css'
+import "./EmojiDisplay.css";
 
 const displayEmojiName = (event) => alert(event.target.id);
 const emojis = [
@@ -21,8 +21,8 @@ function EmojiDisplay() {
   const greeting = "greeting";
   const displayAction = true;
   return (
-    <div className="container">
-      <h1>Hello, World</h1>
+    <>
+      <h3>Hello, World</h3>
       {displayAction && <p>I am writing JSX</p>}
       <ul>
         {emojis.map((emoji) => (
@@ -35,7 +35,7 @@ function EmojiDisplay() {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 

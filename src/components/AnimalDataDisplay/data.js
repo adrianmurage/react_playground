@@ -2,13 +2,13 @@ export default [
   {
     name: "Lion",
     scientificName: "Panthero leo",
-    size: "140",
+    size: 140,
     diet: ["meat"],
   },
   {
     name: "Gorilla",
     scientificName: "Gorilla beringei",
-    size: "205",
+    size: 205,
     diet: ["plants", "insects"],
     additional: {
       notes:
@@ -18,7 +18,7 @@ export default [
   {
     name: "Zebra",
     scientificName: "Equus quagga",
-    size: "322",
+    size: 322,
     diet: ["plants"],
     additional: {
       notes: "There are three different species of Zebra",

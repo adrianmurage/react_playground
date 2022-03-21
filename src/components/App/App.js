@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import EmojiDisplay from "../EmojiDisplay/EmojiDisplay";
 import AnimalCard from "../AnimalDataDisplay/AnimalCard";
 import data from "../AnimalDataDisplay/data";
+import CreatingWrappers from "../CreatingWrappers/CreatingWrappers";
 
 function showAdditional(additional) {
   const alertInformation = Object.entries(additional)
@@ -16,8 +17,8 @@ function App() {
     <>
       <div className={styles.emojisWrapper}>
         <h2>
-          How To Create React Elements with JSX &&  <br/>How To Create Custom
-          Components in React
+          How To Create React Elements with JSX && <br />
+          How To Create Custom Components in React
         </h2>
         <EmojiDisplay />
       </div>
@@ -41,8 +42,11 @@ function App() {
 
       <hr />
 
-      <div>
-        <h2></h2>
+      <div className={styles.creatingWrappersWrapper}>
+        <h2>How To Create Wrapper Components in React with Props</h2>
+        {data.map((animal) => (
+          <CreatingWrappers name={animal.name} key={animal.name} />
+        ))}
       </div>
     </>
   );

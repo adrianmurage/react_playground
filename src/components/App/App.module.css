@@ -1,17 +1,17 @@
-.emojis-wrapper {
+.emojisWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-.animals-wrapper {
+.animalsWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
 }
 
-.animals-wrapper h2 {
+.animalsWrapper h2 {
     text-align: center;
     width: 100%;
 }

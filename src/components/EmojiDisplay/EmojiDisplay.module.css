@@ -1,0 +1,18 @@
+.emojiBtn {
+  font-size: 2em;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.emojiList {
+  display: flex;
+  padding: 0;
+}
+
+.emojiListItem {
+  margin: 0 20px;
+  list-style: none;
+  padding: 0;
+}

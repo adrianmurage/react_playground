@@ -25,7 +25,6 @@ function App() {
           <AnimalCard
             additional={animal.additional}
             diet={animal.diet}
-            key={animal.name}
             name={animal.name}
             scientificName={animal.scientificName}
             showAdditional={showAdditional}

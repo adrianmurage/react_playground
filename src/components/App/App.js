@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import EmojiDisplay from "../EmojiDisplay/EmojiDisplay";
 import AnimalCard from "../AnimalDataDisplay/AnimalCard";
 import data from "../AnimalDataDisplay/data";
@@ -14,16 +14,22 @@ function showAdditional(additional) {
 function App() {
   return (
     <>
-      <div className="emojis-wrapper">
-        <h2>Emojis</h2>
+      <div className={styles.emojisWrapper}>
+        <h2>
+          How To Create React Elements with JSX &&  <br/>How To Create Custom
+          Components in React
+        </h2>
         <EmojiDisplay />
       </div>
+
       <hr />
-      <div className="animals-wrapper">
-        <h2>Animals</h2>
+
+      <div className={styles.animalsWrapper}>
+        <h2>How To Customize React Components with Props</h2>
         {data.map((animal) => (
           <AnimalCard
             additional={animal.additional}
+            key={animal.name}
             diet={animal.diet}
             name={animal.name}
             scientificName={animal.scientificName}
@@ -31,6 +37,12 @@ function App() {
             size={animal.size}
           />
         ))}
+      </div>
+
+      <hr />
+
+      <div>
+        <h2></h2>
       </div>
     </>
   );

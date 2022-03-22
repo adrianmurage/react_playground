@@ -15,18 +15,18 @@ function showAdditional(additional) {
 function App() {
   return (
     <>
+      <h2>
+        How To Create React Elements with JSX && <br />
+        How To Create Custom Components in React
+      </h2>
       <div className={styles.emojisWrapper}>
-        <h2>
-          How To Create React Elements with JSX && <br />
-          How To Create Custom Components in React
-        </h2>
         <EmojiDisplay />
       </div>
 
       <hr />
 
+      <h2>How To Customize React Components with Props</h2>
       <div className={styles.animalsWrapper}>
-        <h2>How To Customize React Components with Props</h2>
         {data.map((animal) => (
           <AnimalCard
             additional={animal.additional}
@@ -42,10 +42,16 @@ function App() {
 
       <hr />
 
+      <h2>How To Create Wrapper Components in React with Props</h2>
       <div className={styles.creatingWrappersWrapper}>
-        <h2>How To Create Wrapper Components in React with Props</h2>
         {data.map((animal) => (
-          <CreatingWrappers name={animal.name} key={animal.name} />
+          <CreatingWrappers
+            diet={animal.diet}
+            key={animal.name}
+            name={animal.name}
+            size={animal.size}
+            scientificName={animal.scientificName}
+          />
         ))}
       </div>
     </>

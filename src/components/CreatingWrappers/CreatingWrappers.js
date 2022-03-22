@@ -1,18 +1,22 @@
 import React from "react";
-// import styles from "./CreatingWrappers.module.css";
-// import propType from "prop-types";
+import styles from "./CreatingWrappers.module.css";
+import PropTypes from "prop-types";
+import CreatingWrappersAnimalDetails from "../CreatingWrappersAnimalDetails/CreatingWrappersAnimalDetails";
 
-export default function CreatingWrappers({ name }) {
+function CreatingWrappers({ name, size, ...props }) {
   return (
-    <>
-      <p>I am here</p>
-      <div>{name}</div>
-      {/* <div>{diet}</div>
-      <div>{size}</div> */}
-    </>
+    <div>
+      <h3>{name}</h3>
+      <div>{size} kg</div>
+      <CreatingWrappersAnimalDetails {...props}/>
+    </div>
   );
 }
 
-// CreatingWrappers.propType(
+CreatingWrappers.propTypes = {
+  name: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
+};
 
-// )
+
+export default CreatingWrappers

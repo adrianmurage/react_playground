@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./CreatingWrappers.module.css";
 import PropTypes from "prop-types";
-import CreatingWrappersAnimalDetails from "../CreatingWrappersAnimalDetails/CreatingWrappersAnimalDetails";
+import AnimalDetails from "../AnimalDetails/AnimalDetails";
+import Card from "../Card/Card";
 
 function CreatingWrappers({ name, size, ...props }) {
   return (
-    <div>
+    <Card title="Animal" details={<AnimalDetails {...props} />}>
       <h3>{name}</h3>
       <div>{size} kg</div>
-      <CreatingWrappersAnimalDetails {...props}/>
-    </div>
+      
+    </Card>
   );
 }
 
@@ -18,5 +18,4 @@ CreatingWrappers.propTypes = {
   size: PropTypes.number.isRequired,
 };
 
-
-export default CreatingWrappers
+export default CreatingWrappers;

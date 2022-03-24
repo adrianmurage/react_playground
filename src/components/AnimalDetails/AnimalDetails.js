@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./CreatingWrappersAnimalDetails.module.css";
+import styles from "./AnimalDetails.module.css";
 
 function convertFood(food) {
   switch (food) {
@@ -14,19 +14,19 @@ function convertFood(food) {
   }
 }
 
-function CreatingWrappersAnimalDetails({ diet, scientificName }) {
+function AnimalDetails({ diet, scientificName }) {
   return (
     <div className={styles.details}>
-      <h4>Detials:</h4>
+      <h4>Details:</h4>
       <div>Scientific Name: {scientificName}.</div>
       <div>Diet : {diet.map((food) => convertFood(food)).join(", ")}</div>
     </div>
   );
 }
 
-CreatingWrappersAnimalDetails.propTypes = {
+AnimalDetails.propTypes = {
   diet: PropTypes.arrayOf(PropTypes.string).isRequired,
   scientificName: PropTypes.string.isRequired,
 };
 
-export default CreatingWrappersAnimalDetails;
+export default AnimalDetails;

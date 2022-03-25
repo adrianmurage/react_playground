@@ -4,6 +4,9 @@ import EmojiDisplay from "../EmojiDisplay/EmojiDisplay";
 import AnimalCard from "../AnimalDataDisplay/AnimalCard";
 import data from "../AnimalDataDisplay/data";
 import CreatingWrappers from "../CreatingWrappers/CreatingWrappers";
+import Alert from "../Alert/Alert";
+import "./App.css";
+import CartSuccess from "../CartSuccess/CartSuccess";
 
 function showAdditional(additional) {
   const alertInformation = Object.entries(additional)
@@ -19,14 +22,14 @@ function App() {
         How To Create React Elements with JSX && <br />
         How To Create Custom Components in React
       </h2>
-      <div className={styles.emojisWrapper}>
+      <div className={styles["emojis-wrapper"]}>
         <EmojiDisplay />
       </div>
 
       <hr />
 
       <h2>How To Customize React Components with Props</h2>
-      <div className={styles.animalsWrapper}>
+      <div className={styles["animals-wrapper"]}>
         {data.map((animal) => (
           <AnimalCard
             additional={animal.additional}
@@ -43,7 +46,7 @@ function App() {
       <hr />
 
       <h2>How To Create Wrapper Components in React with Props</h2>
-      <div className={styles.creatingWrappersWrapper}>
+      <div className={styles["creatingwrappers-wrapper"]}>
         {data.map((animal) => (
           <CreatingWrappers
             diet={animal.diet}
@@ -53,6 +56,15 @@ function App() {
             scientificName={animal.scientificName}
           />
         ))}
+      </div>
+
+      <hr />
+      <h2>How To Style React Components</h2>
+      <div className="wrapper">
+        <Alert title="Items Not Added" type="error">
+          <div>Your items are out of stock.</div>
+        </Alert>
+        <CartSuccess />
       </div>
     </>
   );

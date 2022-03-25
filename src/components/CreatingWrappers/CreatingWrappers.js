@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 function CreatingWrappers({ name, size, ...props }) {
   return (
     <Card title="Animal" details={<AnimalDetails {...props} />}>
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       <div>{size} kg</div>
       
     </Card>

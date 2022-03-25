@@ -1,11 +1,11 @@
-.animalWrapper {
+.animal-wrapper {
   border: solid black 1px;
   margin: 10px;
   padding: 10px;
   width: 200px;
 }
 
-.animalWrapper > button {
+.animal-wrapper > button {
   background: none;
   font-size: 1em;
   border: solid black 1px;

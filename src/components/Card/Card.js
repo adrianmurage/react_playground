@@ -4,9 +4,9 @@ import styles from "./Card.module.css";
 
 function Card({ title, details, children }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.cardDetails}>
-        <h2>{title}</h2>
+    <div className={styles["card"]}>
+      <div className={styles["card-details"]}>
+        <h3>{title}</h3>
         {details}
       </div>
       {children}

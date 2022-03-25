@@ -1,4 +1,4 @@
-.emojiBtn {
+.emoji-btn {
   font-size: 2em;
   border: 0;
   padding: 0;
@@ -6,12 +6,12 @@
   cursor: pointer;
 }
 
-.emojiList {
+.emoji-list {
   display: flex;
   padding: 0;
 }
 
-.emojiListItem {
+.emoji-list-item {
   margin: 0 20px;
   list-style: none;
   padding: 0;

@@ -24,10 +24,10 @@ function EmojiDisplay() {
     <>
       <h3>Hello, World</h3>
       {displayAction && <p>I am writing JSX</p>}
-      <ul className={styles.emojiList}>
+      <ul className={styles["emoji-list"]}>
         {emojis.map((emoji) => (
-          <li className={styles.emojiListItem} key={emoji.name}>
-            <button className={styles.emojiBtn} onClick={displayEmojiName}>
+          <li className={styles["emoji-list-item"]} key={emoji.name}>
+            <button className={styles["emoji-btn"]} onClick={displayEmojiName}>
               <span role="img" aria-label={emoji.name} id={emoji.name}>
                 {emoji.emoji}
               </span>

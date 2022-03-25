@@ -16,7 +16,7 @@ function convertFood(food) {
 
 function AnimalDetails({ diet, scientificName }) {
   return (
-    <div className={styles.details}>
+    <div className={styles["details"]}>
       <h4>Details:</h4>
       <div>Scientific Name: {scientificName}.</div>
       <div>Diet : {diet.map((food) => convertFood(food)).join(", ")}</div>

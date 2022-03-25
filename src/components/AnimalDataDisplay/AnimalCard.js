@@ -11,7 +11,7 @@ export default function AnimalCard({
   size,
 }) {
   return (
-    <div className={styles.animalWrapper}>
+    <div className={styles["animal-wrapper"]}>
       <h3>{name}</h3>
       <h4>{scientificName}</h4>
       <h5>{size} kg</h5>

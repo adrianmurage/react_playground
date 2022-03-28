@@ -5,7 +5,6 @@ import AnimalCard from "../AnimalDataDisplay/AnimalCard";
 import data from "../AnimalDataDisplay/data";
 import CreatingWrappers from "../CreatingWrappers/CreatingWrappers";
 import Alert from "../Alert/Alert";
-import "./App.css";
 import CartSuccess from "../CartSuccess/CartSuccess";
 
 function showAdditional(additional) {
@@ -16,6 +15,9 @@ function showAdditional(additional) {
 }
 
 function App() {
+  const wrapper = {
+    padding: 20,
+  };
   return (
     <>
       <h2>
@@ -60,7 +62,7 @@ function App() {
 
       <hr />
       <h2>How To Style React Components</h2>
-      <div className="wrapper">
+      <div style={wrapper}>
         <Alert title="Items Not Added" type="error">
           <div>Your items are out of stock.</div>
         </Alert>

@@ -6,6 +6,13 @@ import data from "../AnimalDataDisplay/data";
 import CreatingWrappers from "../CreatingWrappers/CreatingWrappers";
 import Alert from "../Alert/Alert";
 import CartSuccess from "../CartSuccess/CartSuccess";
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
+  wrapper: {
+    padding: 20,
+  },
+});
 
 function showAdditional(additional) {
   const alertInformation = Object.entries(additional)
@@ -15,6 +22,8 @@ function showAdditional(additional) {
 }
 
 function App() {
+
+  const classes = useStyles()
   const wrapper = {
     padding: 20,
   };
@@ -62,7 +71,7 @@ function App() {
 
       <hr />
       <h2>How To Style React Components</h2>
-      <div style={wrapper}>
+      <div className={classes.wrapper}>
         <Alert title="Items Not Added" type="error">
           <div>Your items are out of stock.</div>
         </Alert>

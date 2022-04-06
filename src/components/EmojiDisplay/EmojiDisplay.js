@@ -18,7 +18,6 @@ const emojis = [
 ];
 
 function EmojiDisplay() {
-  const greeting = "greeting";
   const displayAction = true;
   return (
     <>

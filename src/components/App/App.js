@@ -6,6 +6,7 @@ import data from "../AnimalDataDisplay/data";
 import CreatingWrappers from "../CreatingWrappers/CreatingWrappers";
 import Alert from "../Alert/Alert";
 import CartSuccess from "../CartSuccess/CartSuccess";
+import Product from "../Product/Product";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
@@ -22,8 +23,7 @@ function showAdditional(additional) {
 }
 
 function App() {
-
-  const classes = useStyles()
+  const classes = useStyles();
   const wrapper = {
     padding: 20,
   };
@@ -77,6 +77,11 @@ function App() {
         </Alert>
         <CartSuccess />
       </div>
+
+      <hr />
+
+      <h2>How To Manage State on React Class Components</h2>
+      <Product />
     </>
   );
 }
